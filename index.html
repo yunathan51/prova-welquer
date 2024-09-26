@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Amigos de Orleans</title>
+</head>
+<body>
+<header>
+    <h1>Amigos de Orleans</h1>
+</header>
+<aside>
+    <div id="caixa-lateral1" class="caixa-lateral">Embaralhar</div>
+</aside>
+<main>
+    <div id="caixa-main1" class="caixa-main">
+        <div class="shadow"></div>
+        <img id="imagem-rafael" class="imagem-main" src="rafael.jpeg" alt="Rafael Laurentino Fernandes">
+        <div class="overlay">
+            <div class="overlay-title">Rafael Laurentino Fernandes</div>
+            <div class="overlay-text">Rafael é um sonhador incansável, sempre com um livro à mão e os olhos brilhando de curiosidade. Em suas caminhadas pela cidade, ele encontra beleza nas pequenas coisas, como o canto dos pássaros e o riso das crianças. Com um coração generoso, ele se dedica a ajudar os outros, espalhando esperança por onde passa.</div>
+        </div>
+    </div>
+    <div id="caixa-main2" class="caixa-main">
+        <div class="shadow"></div>
+        <img id="imagem-joao" class="imagem-main" src="joao.jpeg" alt="João Ricardo Esteves">
+        <div class="overlay">
+            <div class="overlay-title">João Ricardo Esteves</div>
+            <div class="overlay-text">João é um aventureiro nato, sempre em busca de novos desafios e experiências. Com um sorriso contagiante, ele se destaca entre os amigos, trazendo alegria e energia a cada encontro. Apaixonado pela natureza, João passa seus fins de semana explorando trilhas e compartilhando histórias ao redor de uma fogueira.</div>
+        </div>
+    </div>
+    <div id="caixa-main3" class="caixa-main">
+        <div class="shadow"></div>
+        <img id="imagem-kaike" class="imagem-main" src="kaike.jpeg" alt="Kaike Vieira">
+        <div class="overlay">
+            <div class="overlay-title">Kaike Vieira</div>
+            <div class="overlay-text">Kaike é um artista apaixonado, sempre em busca de novas inspirações para suas obras. Ele transforma a vida cotidiana em arte, capturando momentos efêmeros com sua câmera. Com uma visão única, Kaike encanta todos ao seu redor, trazendo cor e emoção para o mundo.</div>
+        </div>
+    </div>
+</main>
+<script>
+    function shuffleCards() {
+        const mainContainer = document.querySelector('main');
+        const cards = Array.from(mainContainer.children);
+        for (let i = cards.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            mainContainer.appendChild(cards[j]);
+        }
+    }
+
+    document.getElementById('caixa-lateral1').addEventListener('click', shuffleCards);
+</script>
+</body>
+</html>
